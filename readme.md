@@ -112,6 +112,7 @@ Gives your collection `.search()` and `.sync()` methods, and keeps Elasticsearch
  * `port` - the port that Elasticsearch is listening on (defaults to `9200`)
  * `prefix` - adds a prefix to the model's search index, allowing you to have separate indices for the same collection on an Elasticsearch instance (defaults to no prefix)
  * `url` - allows you to specify the protocol, host and port by just passing in a url eg. `https://elasticsearch.mydomain.com:9300`. The provided url must contain at least a host and port.
+ * `auth` - allows you to provide simple authentication eg. `user:pass`
 
 Suppose you have a test database and a development database both storing models in the `Cats` collection, but you want them to share one Elasticsearch instance. With the `prefix` option, you can separate out the indices used by `elmongo` to store your data for test and development.
 
